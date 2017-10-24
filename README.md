@@ -3,6 +3,7 @@ The assignments for the course Algorithms from Princeton in coursera.
 
 Course site:
 https://www.coursera.org/learn/algorithms-part1/
+
 https://www.coursera.org/learn/algorithms-part2/
 
 Total 8 psets:
