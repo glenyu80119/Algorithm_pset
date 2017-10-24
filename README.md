@@ -1,10 +1,9 @@
 # Algorithm_pset
 The assignments for the course Algorithms from Princeton in coursera.
 
-Course site:
-https://www.coursera.org/learn/algorithms-part1/
-
-https://www.coursera.org/learn/algorithms-part2/
+Course site:  
+* https://www.coursera.org/learn/algorithms-part1/  
+* https://www.coursera.org/learn/algorithms-part2/
 
 Total 8 psets:
 1. Percolation: Estimate the percolation threshhold using Monte Carlo simulation and union–find.
