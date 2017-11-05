@@ -51,7 +51,7 @@ public class CircularSuffixArray {
         return length;
     }
     public int index(int i) {                 // returns index of ith sorted suffix
-        if (I < 0 || i >= length)
+        if (i < 0 || i >= length)
             throw new java.lang.IllegalArgumentException();
         return suffixArray[i].reindex();
     }

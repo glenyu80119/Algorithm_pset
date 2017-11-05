@@ -1,6 +1,7 @@
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.BinaryStdOut;
 import edu.princeton.cs.algs4.BinaryStdIn;
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 
@@ -31,7 +32,7 @@ public class BurrowsWheeler {
     public static void inverseTransform() {
         int first = BinaryStdIn.readInt();
         String s = BinaryStdIn.readString();
-        ArrayDeque<Integer>[] charCount = new ArrayDeque[256];
+        ArrayDeque<Integer>[] charCount =(ArrayDeque<Integer>[]) new ArrayDeque[256];
         for (int i = 0; i < 256; i++) {
             charCount[i] = new ArrayDeque<Integer>();
         }

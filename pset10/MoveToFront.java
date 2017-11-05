@@ -30,9 +30,9 @@ public class MoveToFront {
         for (int i = 0; i < 256; i++) {
             R[i] = i;
         }
+        char cc = '\0';
         while(!BinaryStdIn.isEmpty()) {
             char c = BinaryStdIn.readChar();
-            char cc = '\0';
             int now = (int) c;
             if (now != 0) {
                 for (int i = 0; i < 256; i++) {
