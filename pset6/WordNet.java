@@ -10,7 +10,7 @@ public class WordNet {
     private SeparateChainingHashSTWordNet st;
     private Bag<String>[] dict;
     private Digraph diGraph;
-    private ShortestCommonAncestor2 sca;
+    private SAP sap;
     private String[] inputdata;
    // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) {
@@ -53,7 +53,7 @@ public class WordNet {
                     }
                 }
             }
-            sca = new ShortestCommonAncestor2(diGraph);
+            sap = new SAP(diGraph);
         }
         else
             throw new java.lang.IllegalArgumentException("no files");
@@ -76,12 +76,12 @@ public class WordNet {
 
    // a synset (second field of synsets.txt) that is a shortest common ancestor
    // of noun1 and noun2 (defined below)
-    public String sca(String noun1, String noun2) {
+    public String sap(String noun1, String noun2) {
         Iterable<Integer> n1 = st.get(noun1);
         Iterable<Integer> n2 = st.get(noun2);
         if (n1 == null || n2 == null)
             throw new java.lang.IllegalArgumentException("There is no such noun.");
-        int ans = sca.ancestor(n1, n2);
+        int ans = sap.ancestor(n1, n2);
         String ansStr = "";
         int nn = 0;
         for (String s: dict[ans]) {
@@ -101,7 +101,7 @@ public class WordNet {
         Iterable<Integer> n2 = st.get(noun2);
         if (n1 == null || n2 == null)
             throw new java.lang.IllegalArgumentException("There is no such noun.");
-        int ans = sca.length(n1, n2);
+        int ans = sap.length(n1, n2);
         return ans;
     }
     private String[] InputData() {
@@ -114,7 +114,7 @@ public class WordNet {
             String v = StdIn.readString();
             String w = StdIn.readString();
             int length   = wn.distance(v, w);
-            String ancestor = wn.sca(v, w);
+            String ancestor = wn.sap(v, w);
             StdOut.printf("length = %d", length);
             StdOut.println("ancestor : "+ ancestor);
         }

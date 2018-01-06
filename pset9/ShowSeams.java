@@ -35,11 +35,11 @@ public class ShowSeams {
         picture.show();        
         SeamCarver sc = new SeamCarver(picture);
         
-        StdOut.printf("Displaying horizontal seam calculated.\n");
-        showHorizontalSeam(sc);
-
         StdOut.printf("Displaying vertical seam calculated.\n");
         showVerticalSeam(sc);
+        
+        StdOut.printf("Displaying horizontal seam calculated.\n");
+        showHorizontalSeam(sc);
 
     }
 
